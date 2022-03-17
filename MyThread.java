@@ -9,11 +9,11 @@ public class MyThread extends Thread {
     public MyThread(int i) {
         this.i = i;
         this.setName("Thread " + i);
+        recursive.func = x -> (x == 0) ? 1 : x * recursive.func.applyAsDouble(x - 1);
     }
 
     @Override
     public void run(){
-        recursive.func = x -> (x == 0) ? 1 : x * recursive.func.applyAsDouble(x - 1);
         System.out.println(this.getName() + ": " + recursive.func.applyAsDouble(i));
 
     }
