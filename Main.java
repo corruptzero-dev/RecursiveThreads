@@ -1,8 +1,5 @@
 package ru.corruptzero;
 
-import java.util.ArrayList;
-import java.util.function.IntToDoubleFunction;
-
 public class Main {
 
     public static void main(String[] args) {
